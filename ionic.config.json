@@ -1,0 +1,7 @@
+{
+  "name": "sprintit",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

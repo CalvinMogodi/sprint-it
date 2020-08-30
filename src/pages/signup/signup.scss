@@ -1,0 +1,50 @@
+page-signup {
+    .toolbar-background-md {
+        background: #1C71A6;    
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #FFFFFF;
+    }
+
+    .logo_text{
+        border-color: #1C71A6;
+        border: 1px #1C71A6 solid;
+        font-size: x-large;
+        color: white;
+        box-shadow: 0px 0px 2px 1px #000000;
+    }
+
+    .toolbar-background{
+        background: #1C71A6;  
+    }
+
+    .toolbar-title-md {
+        color: white;
+    }
+    .center{
+        text-align: center;
+    }
+
+    .white{
+        color: white;
+    }
+
+    .large{
+        font-size: large;
+    }
+
+    .iconstar{
+        font-size: xx-large;
+        color: gold;
+    }
+    
+    .header{
+        font-size: medium;
+        font-weight: 500;
+    }
+
+    .toolbar-content-md{
+        text-align: center;
+    }
+}

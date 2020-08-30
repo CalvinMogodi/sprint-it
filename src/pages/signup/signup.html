@@ -1,0 +1,45 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+      <ion-title>SIGN UP </ion-title>
+    <button ion-button menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+<ion-content class="center" padding>
+  <ion-item>
+    <ion-label color="primary" style="color:#1C71A6;" floating>Name</ion-label>
+    <ion-input type="text" style="color:#1C71A6;" [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" style="color:#1C71A6;" floating>Surname</ion-label>
+    <ion-input type="text" style="color:#1C71A6;" [(ngModel)]="user.surname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" style="color:#1C71A6;" floating>Home Address</ion-label>
+    <ion-input type="text" style="color:#1C71A6;" [(ngModel)]="user.address"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" style="color:#1C71A6;" floating>Email Address</ion-label>
+    <ion-input type="email" style="color:#1C71A6;" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" style="color:#1C71A6;" floating>Cell Number</ion-label>
+    <ion-input type="Number" style="color:#1C71A6;" [(ngModel)]="user.phonenumber"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" style="color:#1C71A6;" floating>Password</ion-label>
+    <ion-input type="password" style="color:#1C71A6;" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" style="color:#1C71A6;" floating>Confirm Password</ion-label>
+    <ion-input type="password" style="color:#1C71A6;" [(ngModel)]="user.confirmPassword"></ion-input>
+  </ion-item>
+  <button ion-button secondary style="margin-top: 15px; background: #1C71A6;" (click)="signup()">Sign Up</button>
+</ion-content>

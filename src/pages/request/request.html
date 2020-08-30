@@ -1,0 +1,57 @@
+<!--
+  Generated template for the RequestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <img src="../../assets/imgs/header_icon.jpg">
+        </button>
+        <ion-title>REQUEST</ion-title>
+        <button ion-button menuToggle end>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding style="text-align: center;">
+    <div>
+        <img src="{{imgURL}}" />
+        <ion-card-content style="margin-top: -50px;">
+            <p>
+                Car Type: {{request.carType}}<br> Date: {{request.date}}<br> Time: {{request.time}}<br> Location: {{request.location}}<br>
+                <label style="font-weight: bold;">Services: </label> 
+                <u style="list-style: none; text-decoration: none;">
+                    <li *ngFor="let service of request.services; let i = index">
+                        {{service}}<br>
+                    </li>
+                </u>
+            </p>
+        </ion-card-content>
+        <ion-list>
+            <ion-item>
+                <ion-label>Payment Method</ion-label>
+                <ion-select [(ngModel)]="paymentMethod" (ionChange)="paymentMethodChanged()" style="border-bottom: 1px solid;">
+                    <ion-option *ngFor="let method of paymentMethods">{{method}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>        
+        <ion-spinner *ngIf="!this.pickedup && this.searching" icon="lines"></ion-spinner>
+        <p *ngIf="!providerCloseBy" style="color:red">
+            There's no service provider close to you.
+        </p>
+        <br><br>
+    </div>
+
+    <div style="position: absolute;bottom: 0;width: 100%;padding: 15px;">
+        <ion-row style="padding-right: 30px;">
+          <ion-col style="text-align: center;">
+              <button  *ngIf="!this.searching"  style="width: 60%;border-radius: 20px;background: #1C71A6" (click)="requestSP()" class="linkbutton" ion-button icon-only >
+                CONFIRM 
+              </button>
+          </ion-col>
+        </ion-row>
+  </div>
+</ion-content>
