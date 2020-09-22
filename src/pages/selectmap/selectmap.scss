@@ -14,9 +14,15 @@ page-selectmap {
       .toolbar-background-md {
         background: #1C71A6;    
     }
+    .toolbar-content-md{
+        margin-left: 3%;
+    }
 
     .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
         color: #FFFFFF;
+    }
+    input[type="text"] {  
+        text-align: center !important; 
     }
 
     .logo_text{

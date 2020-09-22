@@ -1,9 +1,9 @@
 page-history {
     .toolbar-background-md {
-        background: #194794;    
+        background: #1C71A6;    
     }
-    .toolbar-background{
-        background: #194794;
+    .toolbar-content-md{
+        margin-left: 18%;
     }
 
     .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
@@ -31,5 +31,14 @@ page-history {
 
     .large{
         font-size: large;
+    }
+
+    .btn-request {
+        background-color: #90a878;
+        width: 60%;
+        border-radius: 25px;
+        border-color: #90a878;
+        color: #ffffff;
+        font-weight: normal;     
     }
 }

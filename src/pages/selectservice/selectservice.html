@@ -16,107 +16,109 @@
 
 <ion-content padding>
     <ion-list>
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Body Wash & Dry, & Tires', selectedPriceList.bodyWashDryTire)"></ion-checkbox>
-            <ion-label  class="textCut" (click)="calculateTotal('Body Wash & Dry, & Tires', selectedPriceList.bodyWashDryTire)">
-                BODY WASH & DRY, & TIRES
+        <ion-item no-lines>
+            <ion-checkbox (click)="calculateTotal('Regular', selectedPriceList.bodyWashDryTire)"></ion-checkbox> 
+            <ion-label class="textCut">
+                <span class="info-icon" (click)="presentBodyWashDryTirePopover($event)">i</span> REGULAR
+                <p >Exterior / Interior / Tires</p>
             </ion-label>
-            <ion-note item-end (click)="calculateTotal('Body Wash & Dry, & Tires', selectedPriceList.bodyWashDryTire)">
-                R {{selectedPriceList.bodyWashDryTire}} <span class="info-icon" (click)="presentBodyWashDryTirePopover($event)">i</span>
+            <ion-note item-end>
+                R {{selectedPriceList.bodyWashDryTire}} 
             </ion-note>            
         </ion-item>
 
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Interior Clean', selectedPriceList.interiorWash)"></ion-checkbox>
-            <ion-note  class="textCut" item-start (click)="calculateTotal('Interior Clean', selectedPriceList.interiorWash)">
-                INTERIOR CLEAN 
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Interior Clean', selectedPriceList.interiorWash)">
-                R {{selectedPriceList.interiorWash}} <span class="info-icon" (click)="presentInteriorWashPopover($event)">i</span>
+        <ion-item no-lines class="item-md-top-border">
+            <ion-checkbox (click)="calculateTotal('Dry Wash', selectedPriceList.waterlessFullBodyTire)"></ion-checkbox>
+            <ion-label class="textCut">
+                <span class="info-icon" (click)="presentWaterlessFullBodyTirePopover($event)">i</span> DRY WASH
+                <p >Exterior / Interior / Tires</p>
+            </ion-label>
+            <ion-note item-end>
+                R {{selectedPriceList.waterlessFullBodyTire}} 
             </ion-note>           
         </ion-item>
 
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Tire Shine', selectedPriceList.tireShine)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Tire Shine', selectedPriceList.tireShine)">
-                TIRE SHINE 
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Tire Shine', selectedPriceList.tireShine)">
-                R {{selectedPriceList.tireShine}} <span class="info-icon" (click)="presentTireShinePopover($event)">i</span>
-            </ion-note>           
-        </ion-item>
-
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Engine Clean', selectedPriceList.engineClean)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Engine Clean', selectedPriceList.engineClean)">
-                ENGINE CLEAN
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Engine Clean', selectedPriceList.engineClean)">
-                R {{selectedPriceList.engineClean}} <span class="info-icon" (click)="presentEngineCleanPopover($event)">i</span>
-            </ion-note>           
-        </ion-item>
-
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Body Wash & Shine', selectedPriceList.bodyWaxAndShine)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Body Wash & Shine', selectedPriceList.bodyWaxAndShine)">
-                BODY WASH & SHINE
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Body Wash & Shine', selectedPriceList.bodyWaxAndShine)">
-                R {{selectedPriceList.bodyWaxAndShine}} <span class="info-icon" (click)="presentBodyWaxandShinePopover($event)">i</span>
-            </ion-note>           
-        </ion-item>
-
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Interior Disinfectant', selectedPriceList.interiorDisinfectant)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Interior Disinfectant', selectedPriceList.interiorDisinfectant)">
-                INTERIOR DISINFECTANT
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Interior Disinfectant', selectedPriceList.interiorDisinfectant)">
-                R {{selectedPriceList.interiorDisinfectant}} <span class="info-icon" (click)="presentInteriorDisinfectantPopover($event)">i</span>
-            </ion-note>           
-        </ion-item>
-
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Waterless Wash - Full Body & Tire Only', selectedPriceList.waterlessFullBodyTire)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Waterless Wash - Full Body & Tire Only', selectedPriceList.waterlessFullBodyTire)">
-                <span>WATERLESS WASH </span>
-                 Full Body & Tire Only
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Waterless Wash - Full Body & Tire Only', selectedPriceList.waterlessFullBodyTire)">
-                R {{selectedPriceList.waterlessFullBodyTire}} <span class="info-icon" (click)="presentWaterlessFullBodyTirePopover($event)">i</span>
-            </ion-note>           
-        </ion-item>
-
-        <ion-item no-line>
-            <ion-checkbox (click)="calculateTotal('Waterless Wash - Full Body & Interior & Tire', selectedPriceList.waterlessFullBodyInteriorTire)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Waterless Wash - Full Body & Interior & Tire', selectedPriceList.waterlessFullBodyInteriorTire)">
-               <span>WATERLESS WASH</span> 
-                Full Body & Interior & Tire
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Waterless Wash - Full Body & Interior & Tire', selectedPriceList.waterlessFullBodyInteriorTire)">
-                R {{selectedPriceList.waterlessFullBodyInteriorTire}} <span class="info-icon" (click)="presentWaterlessFullBodyInteriorTirePopover($event)">i</span>
-            </ion-note>           
-        </ion-item>
-
-        <ion-item no-line>
+        <ion-item no-lines class="item-md-top-border">
             <ion-checkbox (click)="calculateTotal('Extreme Wash', selectedPriceList.extremefullWash)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Extreme Wash', selectedPriceList.extremefullWash)">
-                EXTREME WASH
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Extreme Wash', selectedPriceList.extremefullWash)">
-                R {{selectedPriceList.extremefullWash}} <span class="info-icon" (click)="presentExtremeFullWashPopover($event)">i</span>
+            <ion-label class="textCut">
+                <span class="info-icon" (click)="presentExtremeFullWashPopover($event)">i</span> EXTREME WASH <span style="background-color: yellow; margin-left: 5px;">MOST POPULAR</span>
+                <p >Exterior / Interior / Tires</p>
+            </ion-label>
+            <ion-note item-end>
+                R {{selectedPriceList.extremefullWash}} 
             </ion-note>           
         </ion-item>
 
-        <ion-item no-line>
+        <ion-item no-lines class="item-md-top-border">
             <ion-checkbox (click)="calculateTotal('Extreme Wash & Body Shine', selectedPriceList.extremefullwashBodyShine)"></ion-checkbox>
-            <ion-note class="textCut" item-start (click)="calculateTotal('Extreme Wash & Body Shine', selectedPriceList.extremefullwashBodyShine)">
-                EXTREME WASH & BODY SHINE
-            </ion-note>
-            <ion-note item-end (click)="calculateTotal('Extreme Wash & Body Shine', selectedPriceList.extremefullwashBodyShine);">
-                R {{selectedPriceList.extremefullwashBodyShine}} <span class="info-icon" (click)="presentWaterlessFullBodyTirePopover($event)">i</span>
+            <ion-label class="textCut">
+                <span class="info-icon" (click)="presentExtremeFullWashBodyShinePopover($event)">i</span> EXTREME WASH & BODY SHINE
+                <p >Exterior / Interior / Tires</p>
+            </ion-label>
+            <ion-note item-end>
+                R {{selectedPriceList.extremefullwashBodyShine}} 
             </ion-note>           
         </ion-item>
+
+        <ion-item no-lines class="item-md-top-border">
+            <ion-checkbox (click)="calculateTotal('Body Wash & Tires Only', selectedPriceList.waterlessFullBodyInteriorTire)"></ion-checkbox>
+            <ion-label class="textCut">
+                <span class="info-icon" (click)="presentWaterlessFullBodyInteriorTirePopover($event)">i</span> BODY WASH & TIRES ONLY
+            </ion-label>
+            <ion-note item-end>
+                R {{selectedPriceList.waterlessFullBodyInteriorTire}} 
+            </ion-note>           
+        </ion-item>
+
+        <ion-item no-lines class="item-md-top-border">
+            <ion-checkbox (click)="calculateTotal('Interior Clean', selectedPriceList.interiorWash)"></ion-checkbox>
+            <ion-label  class="textCut">
+                <span class="info-icon" (click)="presentInteriorWashPopover($event)">i</span> INTERIOR CLEAN ONLY
+            </ion-label>
+            <ion-note item-end>
+                R {{selectedPriceList.interiorWash}} 
+            </ion-note>           
+        </ion-item>
+
+        <ion-item no-lines class="item-md-top-border">
+            <ion-checkbox (click)="calculateTotal('Tire Shine', selectedPriceList.tireShine)"></ion-checkbox>
+            <ion-note class="textCut" item-start>
+                <span class="info-icon" (click)="presentTireShinePopover($event)">i</span> TIRE SHINE 
+            </ion-note>
+            <ion-note item-end>
+                R {{selectedPriceList.tireShine}} 
+            </ion-note>           
+        </ion-item>
+
+        <ion-item no-lines class="item-md-top-border">
+            <ion-checkbox (click)="calculateTotal('Engine Clean', selectedPriceList.engineClean)"></ion-checkbox>
+            <ion-note class="textCut" item-start>
+                <span class="info-icon" (click)="presentEngineCleanPopover($event)">i</span> ENGINE CLEAN
+            </ion-note>
+            <ion-note item-end>
+                R {{selectedPriceList.engineClean}} 
+            </ion-note>           
+        </ion-item>
+
+        <ion-item no-lines class="item-md-top-border">
+            <ion-checkbox (click)="calculateTotal('Body Wash & Shine', selectedPriceList.bodyWaxAndShine)"></ion-checkbox>
+            <ion-note class="textCut" item-start>
+                <span class="info-icon" (click)="presentBodyWaxandShinePopover($event)">i</span> BODY WAX & SHINE
+            </ion-note>
+            <ion-note item-end>
+                R {{selectedPriceList.bodyWaxAndShine}} 
+            </ion-note>           
+        </ion-item>
+
+        <ion-item no-lines class="item-md-top-border">
+            <ion-checkbox (click)="calculateTotal('Interior Disinfectant', selectedPriceList.interiorDisinfectant)"></ion-checkbox>
+            <ion-note class="textCut" item-start>
+                <span class="info-icon" (click)="presentInteriorDisinfectantPopover($event)">i</span> INTERIOR DISINFECTANT
+            </ion-note>
+            <ion-note item-end>
+                R {{selectedPriceList.interiorDisinfectant}} 
+            </ion-note>           
+        </ion-item>  
     </ion-list>
 
     <div style="bottom: 0;width: 100%;">

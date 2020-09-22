@@ -49,15 +49,15 @@ export class HomePage {
 }
 
   requst(){
-    this.navCtrl.setRoot(SelectcarPage);
+    this.navCtrl.push(SelectcarPage);
   }
 
   register(){
-    this.navCtrl.setRoot(SignupPage);
+    this.navCtrl.push(SignupPage);
   }
 
   login(){
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.push(LoginPage);
   }
 
 }

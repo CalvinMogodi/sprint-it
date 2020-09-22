@@ -73,7 +73,7 @@ export class SelectServicesPage {
     extremefullwashBodyShine: '250'
   },
   {
-    carType: 'DCapSuv',
+    carType: 'SUV',
     bodyWashDryTire: '130',
     interiorWash: '90',
     tireShine: '10',
@@ -133,6 +133,7 @@ calculateTotal(service: string, amount: number){
 
 proceed(){
   this.request.services = this.request.services;  
+  this.request.total = this.totalPrice;
   this.navCtrl.push(SelectmapPage, { request: this.request });
 }
 

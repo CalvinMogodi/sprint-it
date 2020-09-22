@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AvaliableservieproviderPage } from '../avaliableservieprovider/avaliableservieprovider';
 import { Storage } from '@ionic/storage';
+import { SelectcarPage } from '../selectcar/selectcar';
 
 /**
  * Generated class for the HistoryPage page.
@@ -34,10 +35,12 @@ export class HistoryPage {
           }
         });
       }
-    });
-   
+    });   
   }
 
+  requst(){
+    this.navCtrl.push(SelectcarPage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HistoryPage');

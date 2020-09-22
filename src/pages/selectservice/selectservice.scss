@@ -1,10 +1,20 @@
 page-selectservices {
-    .item-md{
-        color: gray !important;
+
+    .item-inner {
+        margin-left: -25px;
+    }
+
+    .item-md-top-border{
         border-top: 1px solid gainsboro !important;
     }
+
+    .item-md{
+        color: gray !important;
+    }
+
     ion-note {
         color: gray !important;
+        margin-left: -25px !important;
     }
 
     .checkbox-md{      
@@ -18,7 +28,22 @@ page-selectservices {
         background: #1C71A6;    
     }
     .toolbar-content-md{
-        text-align: center;
+        margin-left: 7%;
+    }
+
+    .item-md p {
+        font-size: 1.2rem;
+        margin-left: 22px;
+        font-weight: 400;
+    }
+
+    ion-label {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .label-md {
+        margin: 5px 8px 9px 0 !important;
     }
 
     .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
@@ -64,6 +89,7 @@ page-selectservices {
         font-style: italic;
         font-size: 1.6rem;        
         padding-left: 4px;
+        padding-right: 10px;
         z-index: 10;
     }
 }

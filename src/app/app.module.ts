@@ -39,6 +39,9 @@ import { EngineCleanPage } from '../pages/selectservice/popover/engineclean/engi
 import { BodyWaxandShinePage } from '../pages/selectservice/popover/bodywaxandshine/bodywaxandshine';
 import { BodyWashDryTirePage } from '../pages/selectservice/popover/bodywashdrytire/bodywashdrytire';
 import { WaterlessFullBodyTirePageModule } from '../pages/selectservice/popover/waterlessfullbodytire/waterlessfullbodytire.module';
+import { MyrequestPage } from '../pages/myrequest/myrequest';
+import { ProfilePage } from '../pages/profile/profile';
+import { SplashPage } from '../pages/splash/splash';
 
 var config = {
   apiKey: "AIzaSyBJ5h0a3tE_HSF-vnqllbBRqqa8k6W77NQ",
@@ -74,7 +77,10 @@ var config = {
     InteriorDisinfectantPage,
     EngineCleanPage,
     BodyWaxandShinePage,
-    BodyWashDryTirePage
+    BodyWashDryTirePage,
+    MyrequestPage,
+    ProfilePage,
+    SplashPage
   ],
   imports: [
     BrowserModule,
@@ -110,7 +116,10 @@ var config = {
     InteriorDisinfectantPage,
     EngineCleanPage,
     BodyWaxandShinePage,
-    BodyWashDryTirePage
+    BodyWashDryTirePage,
+    MyrequestPage,
+    ProfilePage,
+    SplashPage
   ],
   providers: [
     StatusBar,

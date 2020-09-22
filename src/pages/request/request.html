@@ -45,10 +45,18 @@
         <br><br>
     </div>
 
-    <div style="position: absolute;bottom: 0;width: 100%;padding: 15px;">
+    <div>
+        <ion-row style="border-top: 1px solid gainsboro;">
+            <ion-col style="text-align: left;color: gray">
+               TOTAL
+            </ion-col>
+            <ion-col style="text-align: right;color: #1C71A6">
+               R {{request.total}}
+            </ion-col>
+          </ion-row>
         <ion-row style="padding-right: 30px;">
           <ion-col style="text-align: center;">
-              <button  *ngIf="!this.searching"  style="width: 60%;border-radius: 20px;background: #1C71A6" (click)="requestSP()" class="linkbutton" ion-button icon-only >
+              <button  *ngIf="!this.searching" style="width: 60%;border-radius: 20px;background:#1C71A6" (click)="requestSP()" class="linkbutton" ion-button icon-only >
                 CONFIRM 
               </button>
           </ion-col>

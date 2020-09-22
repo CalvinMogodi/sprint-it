@@ -151,6 +151,7 @@ export class RequestPage {
             this.request.paymentMethod = this.paymentMethod;
             this.request.spName = user.name;
             this.request.spId = spId;
+            this.request.userId = val;
             if (this.paymentMethod == "Card"){
               this.request.status = 'Pending Payment';
               this.request.active = false;

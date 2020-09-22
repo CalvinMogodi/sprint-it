@@ -1,0 +1,44 @@
+page-myrequest {
+    .toolbar-background-md {
+        background: #1C71A6;    
+    }
+    .toolbar-content-md{
+        margin-left: 15%;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #FFFFFF;
+    }
+
+    .logo_text{
+        border-color: blue;
+        border: 1px blue solid;
+        font-size: x-large;
+        color: white;
+        box-shadow: 0px 0px 2px 1px #000000;
+    }
+
+    .toolbar-title-md {
+        color: white;
+    }
+    .center{
+        text-align: center;
+    }
+
+    .white{
+        color: white;
+    }
+
+    .large{
+        font-size: large;
+    }
+
+    .btn-request {
+        background-color: #90a878;
+        width: 60%;
+        border-radius: 25px;
+        border-color: #90a878;
+        color: #ffffff;
+        font-weight: normal;     
+    }
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <img src="../../assets/imgs/header_icon.jpg">
+    </button>
+    <ion-title>My Requests</ion-title> 
+    <button ion-button menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="text-align: center">
+  <ion-list>
+    <ion-item class="item" *ngFor="let request of requests">
+      <ion-avatar item-start>
+        <img style="width: 60px;height: 44px;" src="../../assets/imgs/version1/cars/{{request.carType}}.jpeg">
+      </ion-avatar>
+      <h2>{{request.status}}</h2>
+      <p>{{request.spName}}</p>
+      <ion-note item-end>{{request.date}} {{request.time}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="requests.length == 0" style="padding-top: 50%;color: gray !important;">
+    <h2>No Request Found</h2>
+    <p style="padding: 0px 80px 0px 80px;">There are no requests found for you. You must first request a book a wash. </p>
+    <button class="btn-request" ion-button shape="round" secondary (click)="requst()">Request for a springit</button>
+  </div>
+</ion-content>
