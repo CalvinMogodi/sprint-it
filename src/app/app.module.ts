@@ -42,6 +42,8 @@ import { WaterlessFullBodyTirePageModule } from '../pages/selectservice/popover/
 import { MyrequestPage } from '../pages/myrequest/myrequest';
 import { ProfilePage } from '../pages/profile/profile';
 import { SplashPage } from '../pages/splash/splash';
+import { TermsandconditionsPage } from '../pages/termsandconditions/termsandconditions';
+import { BecomeserviceproviderPage } from '../pages/becomeserviceprovider/becomeserviceprovider';
 
 var config = {
   apiKey: "AIzaSyBJ5h0a3tE_HSF-vnqllbBRqqa8k6W77NQ",
@@ -80,7 +82,9 @@ var config = {
     BodyWashDryTirePage,
     MyrequestPage,
     ProfilePage,
-    SplashPage
+    SplashPage,
+    TermsandconditionsPage,
+    BecomeserviceproviderPage
   ],
   imports: [
     BrowserModule,
@@ -119,7 +123,9 @@ var config = {
     BodyWashDryTirePage,
     MyrequestPage,
     ProfilePage,
-    SplashPage
+    SplashPage,
+    TermsandconditionsPage,
+    BecomeserviceproviderPage
   ],
   providers: [
     StatusBar,

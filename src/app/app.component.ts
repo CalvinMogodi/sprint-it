@@ -10,6 +10,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { ProfilePage } from '../pages/profile/profile';
 import { MyrequestPage } from '../pages/myrequest/myrequest';
 import { SplashPage } from '../pages/splash/splash';
+import { TermsandconditionsPage } from '../pages/termsandconditions/termsandconditions';
+import { BecomeserviceproviderPage } from '../pages/becomeserviceprovider/becomeserviceprovider';
 
 @Component({
   templateUrl: 'app.html'
@@ -41,16 +43,16 @@ export class MyApp {
             this.pages.push( { title: 'Profile', component: ProfilePage });
             this.pages.push( { title: 'My Requests', component: MyrequestPage });
             this.pages.push( { title: 'History', component: HistoryPage });
-            this.pages.push( { title: 'Become a Service Provider', component: HistoryPage });
-            this.pages.push( { title: 'Terms & Conditions', component: HistoryPage });
-            this.pages.push( { title: 'Logout', component: HistoryPage });
+            this.pages.push( { title: 'Become a Service Provider', component: BecomeserviceproviderPage });
+            this.pages.push( { title: 'Terms & Conditions', component: TermsandconditionsPage });
+            this.pages.push( { title: 'Logout', component: SplashPage });
           }
         });
       
       }else{
-        this.pages.push( { title: 'Become a Service Provider', component: HistoryPage });
-      this.pages.push( { title: 'Terms & Conditions', component: HistoryPage });
-      this.pages.push( { title: 'Logout', component: HistoryPage });
+        this.pages.push( { title: 'Become a Service Provider', component: BecomeserviceproviderPage });
+      this.pages.push( { title: 'Terms & Conditions', component: TermsandconditionsPage });
+      this.pages.push( { title: 'Logout', component: SplashPage });
       }
     
     });
@@ -80,9 +82,9 @@ export class MyApp {
     else if(page.title == 'Profile')
       this.nav.push(page.component);
     else if(page.title == 'Become a Service Provider')
-      window.open("https://springitapp.com/registerasspringitcleaner.html",'_system', 'location=yes');      
+      this.nav.push(page.component);     
     else if(page.title == 'Terms & Conditions')
-      window.open("https://springitapp.com/terms.html",'_system', 'location=yes');
+        this.nav.push(page.component)
     else{
       this.nav.setRoot(page.component);
     }    
